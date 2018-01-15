@@ -1,0 +1,87 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/10/ArrayTest/Main.jack
+
+// (identical to projects/09/Average/Main.jack)
+
+
+/** Computes the average of a sequence of integers. */
+//let c = Car.new("Jaguar", "007", "boo", "999999")
+//let a[i] = Keyboard.readInt("ENTER THE NEXT NUMBER: ");
+
+class Main {
+
+    //Alex testing class var decs:
+    //field int x, y;
+    //field int size;
+
+    //Alex testing constructor w/ args, parameter list:
+    //constructor Square new(int Ax, int Ay, int Asize) {
+    //  let x = Ax;
+    //  let y = Ay;
+    //  let size = Asize;
+    //  do draw();
+    //  return x;
+    //}
+
+    //Alex testing subroutine vardec
+    // yes, its kinda long
+    //method void run() {
+    //  var char key;
+    //  var boolean exit;
+
+//      let exit = key;
+//      while (exit) {
+//         while (key) {
+//            let key = key;
+//            do moveSquare();
+//         }
+
+  //       if (key) { let exit = exit; }
+  //       if (key) { do square.decSize(); }
+  //       if (key) { do square.incSize(); }
+  //       if (key) { let direction = exit; }
+  //       if (key) { let direction = key; }
+  //       if (key) { let direction = square; }
+  //       if (key) { let direction = direction; }
+
+  //       while (key) {
+  //          let key = key;
+  //          do moveSquare();
+  //       }
+  //    }
+  //    return;
+  //  }  end of alex test of subroutine vardec
+
+
+
+    function void main() {
+        var Array a;
+        var int length;
+        var int i, sum;
+
+	let length = Keyboard.readInt("HOW MANY NUMBERS? ");
+	let a = Array.new(length);
+	let i = 0;
+
+	while (i < length) {
+	    let a[i] = Keyboard.readInt("ENTER THE NEXT NUMBER: ");
+	    let i = i + 1;
+	}
+
+	let i = 0;
+	let sum = 0;
+
+	while (i < length) {
+	    let sum = sum + a[i];
+	    let i = i + 1;
+	}
+
+	do Output.printString("THE AVERAGE IS: ");
+	do Output.printInt(sum / length);
+	do Output.println();
+
+	return;
+    }
+}

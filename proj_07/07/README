@@ -1,0 +1,25 @@
+Hello!
+
+This is the README for project 7 of the nand2tetris course (http://nand2tetris.org/).
+
+How to compile and run:
+  - The 'driver' of the program is VMtoMnemonics.py. Start there to read and understand the code.
+  - At the bottom of the VMtoMnemonics.py file, a 'target' variable is set.
+    - If you wish to compile your own file, you will need to change the value of 'target' to the file you wish to
+      translate.
+  - To run (read all steps before execution):
+    - assumption: you have python 3.5 or later installed. (required for the pathlib library)
+    - change the name of the 'target' variable in VMtoMnemonics.py.
+    - remove any identation and lines associated with the line 'if __name__=='main'...'
+    - navigage to the  'hardt07' directory (parent directory of VMtoMnemonics.py)
+    - type $> python VMtoMnemonics.py
+    - The program will find the '.vm' file in the source directory and translate it to a '.asm' file in the same
+      directory.
+    - There are commented out example 'target'(s) so it is more clear how to change that value.
+
+
+Comments:
+  - none, yet.
+
+Questions:
+  contact me at: ahardt@nps.edu
